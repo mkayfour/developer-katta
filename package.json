@@ -10,10 +10,12 @@
   "author": "Mohit Kumar",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "concurrently": "^5.1.0",
     "config": "^3.3.0",
     "express": "^4.17.1",
     "express-validator": "^6.4.0",
+    "gravatar": "^1.8.0",
     "mongoose": "^5.9.2",
     "nodemon": "^2.0.2"
   }

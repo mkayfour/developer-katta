@@ -4,7 +4,7 @@
   "description": "test mern stack project",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "server": "nodemon server"
   },
   "author": "Mohit Kumar",

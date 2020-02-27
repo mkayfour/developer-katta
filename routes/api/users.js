@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { check, validationResult } = require("express-validator");
 const gravatar = require("gravatar");
-const bcrpt = require("bcryptjs");
+const bcrypt = require("bcryptjs");
 const User = require("../../models/User");
 const jwt = require("jsonwebtoken");
 const config = require("config");
@@ -65,9 +65,9 @@ router.post(
       });
 
       // Encrypt password
-      const salt = await bcrpt.genSalt(10);
+      const salt = await bcrypt.genSalt(10);
 
-      user.password = await bcrpt.hash(password, salt);
+      user.password = await bcrypt.hash(password, salt);
 
       await user.save();
 

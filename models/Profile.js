@@ -1,10 +1,17 @@
 const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-const ProfileSchema = new mongoose.Schema({
+// Create Schema
+const ProfileSchema = new Schema({
   user: {
-    type: mongoose.Schema.Types.ObjectId,
+    type: Schema.Types.ObjectId,
     ref: "user"
   },
+  // handle: {
+  //   type: String,
+  //   required: true,
+  //   max: 40
+  // },
   company: {
     type: String
   },
@@ -87,25 +94,23 @@ const ProfileSchema = new mongoose.Schema({
       }
     }
   ],
-  social: [
-    {
-      youtube: {
-        type: String
-      },
-      twitte: {
-        type: String
-      },
-      facebook: {
-        type: String
-      },
-      linkedin: {
-        type: String
-      },
-      instagram: {
-        type: String
-      }
+  social: {
+    youtube: {
+      type: String
+    },
+    twitter: {
+      type: String
+    },
+    facebook: {
+      type: String
+    },
+    linkedin: {
+      type: String
+    },
+    instagram: {
+      type: String
     }
-  ],
+  },
   date: {
     type: Date,
     default: Date.now

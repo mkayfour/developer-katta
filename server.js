@@ -12,6 +12,9 @@ const PORT = process.env.PORT || 5000;
 // connect db
 connectDB();
 
+//init middleware
+app.use(express.json({ extended: false }));
+
 app.listen(PORT, () => {
     console.log(`Server started on port: ${PORT}`)
 });

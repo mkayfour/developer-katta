@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "server": "nodemon server"
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "server-client": "concurrently \"npm run server\" \"npm run client \""
   },
   "author": "Mohit Kumar",
   "license": "ISC",

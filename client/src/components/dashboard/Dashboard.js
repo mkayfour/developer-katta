@@ -14,6 +14,9 @@ const Dashboard = ({
     getCurrentProfile();
   }, []);
 
+  // to remove
+  console.log("auth-user", auth.username);
+
   return loading && profile === null ? (
     <Spinner />
   ) : (

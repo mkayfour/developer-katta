@@ -36,7 +36,7 @@ export default function(state = initialState, action) {
         loading: false
       };
     case REGISTER_FAIL:
-      localStorage.removeItem("token", payload.token);
+      localStorage.removeItem("token");
       return {
         ...state,
         ...payload,
@@ -44,7 +44,7 @@ export default function(state = initialState, action) {
         loading: false
       };
     case AUTH_ERROR:
-      //   localStorage.removeItem("token", payload.token);
+      localStorage.removeItem("token");
       return {
         ...state,
         ...payload,
@@ -60,7 +60,7 @@ export default function(state = initialState, action) {
         loading: false
       };
     case LOGIN_FAIL:
-      // localStorage.removeItem("token", payload.token);
+      localStorage.removeItem("token");
       return {
         ...state,
         ...payload,

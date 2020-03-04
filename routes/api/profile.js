@@ -249,7 +249,7 @@ router.delete("/experience/:exp_id", auth, async (req, res) => {
 
     await profile.save();
 
-    return res.json({ msg: "experience deleted" });
+    return res.json(profile);
   } catch (err) {
     console.error(err.message);
     return res.status(500).json({ msg: "server error" });
@@ -334,9 +334,10 @@ router.delete("/education/:edu_id", auth, async (req, res) => {
 
     await profile.save();
 
-    return res.json({ msg: "education deleted" });
+    return res.json(profile);
   } catch (err) {
     console.error(err.message);
+    sn;
     return res.status(500).json({ msg: "server error" });
   }
 });

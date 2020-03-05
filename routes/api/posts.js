@@ -125,7 +125,7 @@ router.put("/like/:post_id", auth, async (req, res) => {
 
     await post.save();
 
-    res.json({ msg: "post liked" });
+    res.json(post);
   } catch (err) {
     console.error(err.message);
 

@@ -10,7 +10,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
   console.log("profiles ", profiles);
   useEffect(() => {
     getProfiles();
-  }, []);
+  }, [getProfiles]);
 
   return (
     <Fragment>
